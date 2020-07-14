@@ -9,10 +9,12 @@ scrivi anche la posizione "umana" della lista in cui il nuovo utente si trova
 var listaCognomi=['Bianchi','Rossi','Duzioni','Balsano','Verdi'];
 
 //inserimento da parte dell'utente
-var nuovoCognome=prompt('inserisci il tuo cognome');
+do {
+    var nuovoCognome=prompt('Inserisci il tuo cognome');
+} while (nuovoCognome == "");
 
 //normalizzo dato inserito
-var nuovoCognome= nuovoCognome.slice(0,1).toUpperCase()+nuovoCognome.slice(1).toLowerCase();
+var nuovoCognome= nuovoCognome.charAt(0).toUpperCase()+nuovoCognome.slice(1).toLowerCase();
 
 //aggiungo il dato inserito all'array
 listaCognomi.push(nuovoCognome);
